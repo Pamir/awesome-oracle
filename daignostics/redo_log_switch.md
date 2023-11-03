@@ -52,5 +52,5 @@ alter system switch logfile;
 
 ![Strace LogWriter](../media/strace_redo_open.png)
 
-####Conclusion
+#### Conclusion
 The LGWRT process initiates an open system call whenever it needs to access a redo log file that isn't already open. After opening a redo file, it maintains the file open, even when it switches over to a different redo file, without executing a close operation.
