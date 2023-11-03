@@ -21,7 +21,7 @@ to_char(first_time,'yyyy-mm-dd'),to_char(first_time,'hh24')
 ASC;
 ```
 
-We will use strace to monitor log switch events; however, unlike earlier versions, we are unable to observe the open system call for the corresponding redo log file
+We'll execute strace to track log switch events. Yet, in contrast to previous versions of Oracle Database, the open system call for the associated redo log file remains unseen to us.
 
 ```bash
  strace -p $(pgrep lgwr_$ORACLE_SID) 2>&1 | grep -i open
