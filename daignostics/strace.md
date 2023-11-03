@@ -17,7 +17,7 @@ as (select level, ceil(dbms_random.value(0, 1000)),
                   ceil(dbms_random.value(0,10000)), 
                   round(dbms_random.value(0,10000),2) 
     from dual 
-    connect by level <= 1000000)
+    connect by level <= 1000000);
 /
 ```
 ![strace](../media/oracle_diag_strace_logwrite_output.png)
